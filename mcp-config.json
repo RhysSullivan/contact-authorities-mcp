@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "contact-authorities": {
+      "command": "node",
+      "args": ["-e", "console.log('Use HTTP transport for this MCP server')"],
+      "transport": {
+        "type": "http",
+        "url": "http://localhost:3000/api/mcp"
+      }
+    }
+  }
+}
