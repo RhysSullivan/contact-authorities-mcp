@@ -12,14 +12,7 @@ import { supabase } from "@/lib/supabase";
 import { Button } from "@/components/ui/button";
 import { MCPInstructions } from "./mcp-instructions";
 
-interface ContactEvent {
-  id: string;
-  title: string;
-  target: string;
-  description: string;
-  timestamp: string;
-  ip: string;
-}
+export const revalidate = 60;
 
 export default async function ContactAuthoritiesPage() {
   const { data: events, error } = await supabase
