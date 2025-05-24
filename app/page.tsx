@@ -75,7 +75,6 @@ export default async function ContactAuthoritiesPage() {
                     </p>
                     <div className="flex justify-between items-center text-xs text-gray-500">
                       <span>{new Date(event.timestamp).toLocaleString()}</span>
-                      <span>IP: {event.ip}</span>
                     </div>
                   </div>
                 ))
