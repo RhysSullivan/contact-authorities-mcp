@@ -1,6 +1,7 @@
 import { createMcpHandler } from "@vercel/mcp-adapter";
 import z from "zod";
 import { supabaseAdmin } from "@/lib/supabase";
+import { revalidatePath } from "next/cache";
 
 const handler = createMcpHandler(
   async (server) => {
@@ -49,6 +50,7 @@ const handler = createMcpHandler(
           };
         }
 
+        revalidatePath("/");
         return {
           content: [
             {
